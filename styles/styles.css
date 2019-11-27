@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header nav {
+  padding: 1rem 0;
+}
+header nav > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+header nav > ul li {
+  list-style-type: none;
+}
+header nav > ul li:hover a {
+  color: #eb212e;
+}
+header nav > ul a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #000;
+  padding: 0 1rem;
+  font-size: 1.25rem;
+}
+header nav > ul button {
+  padding: 0.5rem 1rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+}
+header nav > ul button:active {
+  outline: none;
+}
+header nav > ul button:hover {
+  background: #eb212e;
+}
+header .hero {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url("../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  padding-left: 7.5%;
+}
+header .hero .hero-content {
+  color: #fff;
+  width: 35%;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+header .hero h2 {
+  font-size: 3.3rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+header .hero p {
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+header .hero a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=styles.css.map */
