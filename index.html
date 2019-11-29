@@ -213,11 +213,12 @@
                 <h2>đồng giá từ 1500k đến 2000k - giảm đến 50%</h2>
                 <p>Chọn theo phân khúc giá:</p>
                 <div class="price-range">
-                    <span class="price">1500K</span>
+                    <span class="popout"></span>
+                    <span class="price" id="price-1" >1500K</span>
                     <span class="dash"></span>
-                    <span class="price">2000K</span>
+                    <span class="price" id="price-2" >2000K</span>
                     <span class="dash"></span>
-                    <span class="price">2500K</span>
+                    <span class="price" id="price-3" >2500K</span>
                 </div>
                 <div class="carousel js-product-carousel">
                     <div class="carousel__view">
@@ -401,91 +402,8 @@
     AOS.init();
 </script>
 <script>
-// Count down logic
-// Set the date we're counting down to
-let dateCountTo = new Date("Jan 25, 2020").getTime();
-// Update the count down every 1 second
-let x = setInterval(function() {
-        // Get current date and time
-        let currentDate = new Date().getTime();
-        // Find the distance between now and the count down date
-        var distance = dateCountTo - currentDate;
-        // calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        // Display the result in the element with id="demo"
-        document.getElementById("day").innerHTML = days + "<br /> Ngày";
-        document.getElementById("hours").innerHTML = hours + "<br /> Giờ";
-        document.getElementById("minutes").innerHTML = minutes + "<br /> Phút";
-        document.getElementById("seconds").innerHTML = seconds + "<br /> Giây";
-        // If the count down is finished, write some text
-        if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-        }
-    }, 1000);
-
-// images list selling product logic
-document.addEventListener('DOMContentLoaded', () => {
-    // show selling product img list
-    let imgList = document.querySelectorAll(".img-list");
-    imgList = [...imgList];
-    let currentImg = document.getElementById("current-img");
-    imgList.map(img => {
-        img.addEventListener("click", () => {
-            currentImg.src = img.src;
-        });
-    })
-
-    let greeting = document.getElementById("greeting");
-    greeting.addEventListener("click", () => {
-        greeting.style.display = "none";
-    })
-});
-
-// carousel logic
-let carousel = document.querySelector('.js-product-carousel');
-carouselize(carousel);
-function carouselize(carousel) {
-    let productList = carousel.querySelector('.js-product-list');
-    let productListWidth = 0;
-    let productListSteps = 0;
-    let products = carousel.querySelectorAll('.product');
-    let productAmount = 0;
-    let productAmountVisible = 4;
-    let carouselPrev = carousel.querySelector('.carousel__control-prev');
-    let carouselNext = carousel.querySelector('.carousel__control-next');
-
-//Call all the products
-[].forEach.call(products, function(product) {
-    console.log(product);
-    productAmount++;
-    productListWidth += 305.25;
-    productList.style.width = productListWidth + "px";
-});
-
-carouselNext.onclick = function() {
-    if(productListSteps < productAmount - productAmountVisible) {
-    productListSteps++;
-    moveProductList();
-    }
-}
-carouselPrev.onclick = function() {
-    if(productListSteps > 0) {
-    productListSteps--;
-    moveProductList();
-    }
-}
-
-// Move the carousels product-list
-    function moveProductList() {
-        productList.style.transform = "translateX(-" + 305.25 * productListSteps + "px)";
-    }
-}
-// selected range prices
-const productsList = [
+// declare data for page ----------------------------------------------------------------------
+const productsList_1 = [
     {
       title: "hút bụi panasonic Mc Cg331rn46",
       price: 1590000,
@@ -526,9 +444,235 @@ const productsList = [
       price: 1590000,
       realPrice: 1840000,
       discountPercent: 14,
-      img: "carousel-8.jpg"
+      img: "carousel-6.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 1590000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-7.jpg"
     }
 ]
+const productsList_2 = [
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2090000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-7.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2090000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-5.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2090000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-3.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2090000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-1.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2090000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-2.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2090000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-4.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2090000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-6.jpg"
+    }
+]
+const productsList_3 = [
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2790000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-7.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2790000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-6.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2790000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-5.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2790000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-4.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2790000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-3.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2790000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-2.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 2790000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-1.jpg"
+    }
+]
+
+// Count down logic------------------------------------------------------------------------------
+// Set the date we're counting down to
+let dateCountTo = new Date("Jan 25, 2020").getTime();
+// Update the count down every 1 second
+let x = setInterval(function() {
+        // Get current date and time
+        let currentDate = new Date().getTime();
+        // Find the distance between now and the count down date
+        var distance = dateCountTo - currentDate;
+        // calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Display the result in the element with id="demo"
+        document.getElementById("day").innerHTML = days + "<br /> Ngày";
+        document.getElementById("hours").innerHTML = hours + "<br /> Giờ";
+        document.getElementById("minutes").innerHTML = minutes + "<br /> Phút";
+        document.getElementById("seconds").innerHTML = seconds + "<br /> Giây";
+        // If the count down is finished, write some text
+        if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+
+// images list selling product logic
+document.addEventListener('DOMContentLoaded', () => {
+    // show selling product img list-------------------------------------------------------------
+    let imgList = document.querySelectorAll(".img-list");
+    imgList = [...imgList];
+    let currentImg = document.getElementById("current-img");
+    imgList.map(img => {
+        img.addEventListener("click", () => {
+            currentImg.src = img.src;
+        });
+    })
+
+    // selected range prices -------------------------------------------------------------------------
+    function getProductRange(range, data, popoutPos) {
+        range.addEventListener("click", () => {
+            let content = "";
+            let target = document.querySelector(".js-product-list");
+            let popout = document.querySelector(".popout");
+            data.map(product => {
+            content += `<li class="product-list__item" data-aos="fade-left">
+                    <div class="product">
+                        <img src=./images/${product.img} />
+                        <p>${product.title}</p>
+                        <div class="product-price">
+                            <span>${product.price}</span>
+                            <span class="discount-percent">-${product.discountPercent}%</span>
+                            <p>${product.realPrice}</p>
+                        </div>
+                    </div>
+                </li>`
+            });
+            target.innerHTML = content;
+            popout.style.left = popoutPos;
+        });
+    }
+
+    let priceRangeNo1 = document.getElementById("price-1");
+    let priceRangeNo2 = document.getElementById("price-2");
+    let priceRangeNo3 = document.getElementById("price-3");
+    getProductRange(priceRangeNo1, productsList_1, "35%");
+    getProductRange(priceRangeNo2, productsList_2, "48%");
+    getProductRange(priceRangeNo3, productsList_3, "62%");
+
+    // greeting for responsive err --------------------------------------------------------------------
+    let greeting = document.getElementById("greeting");
+    greeting.addEventListener("click", () => {
+        greeting.style.display = "none";
+    })
+});
+
+// carousel logic -------------------------------------------------------------------------------
+let carousel = document.querySelector('.js-product-carousel');
+carouselize(carousel);
+function carouselize(carousel) {
+    let productList = carousel.querySelector('.js-product-list');
+    let productListWidth = 0;
+    let productListSteps = 0;
+    let products = carousel.querySelectorAll('.product');
+    let productAmount = 0;
+    let productAmountVisible = 4;
+    let carouselPrev = carousel.querySelector('.carousel__control-prev');
+    let carouselNext = carousel.querySelector('.carousel__control-next');
+
+//Call all the products
+[].forEach.call(products, function(product) {
+    console.log(product);
+    productAmount++;
+    productListWidth += 305.25;
+    productList.style.width = productListWidth + "px";
+});
+
+carouselNext.onclick = function() {
+    if(productListSteps < productAmount - productAmountVisible) {
+    productListSteps++;
+    moveProductList();
+    }
+}
+carouselPrev.onclick = function() {
+    if(productListSteps > 0) {
+    productListSteps--;
+    moveProductList();
+    }
+}
+
+// Move the carousels product-list
+    function moveProductList() {
+        productList.style.transform = "translateX(-" + 305.25 * productListSteps + "px)";
+    }
+}
+
 </script>
 </body>
 </html>
