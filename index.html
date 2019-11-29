@@ -11,6 +11,8 @@
     <script src="https://kit.fontawesome.com/3a5f9214d4.js" crossorigin="anonymous"></script>
     <!-- add external style file -->
     <link href="./styles/styles.css" rel="stylesheet" />
+    <!-- animation libary -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div id="greeting">
@@ -75,12 +77,12 @@
     <!-- end of compny section -->
     <!-- page articles -->
     <section class="blog section" id="blog">
-        <h2 class="blog__header title-commonly">Lợi ích của Matcha
+        <h2 class="blog__header title-commonly" data-aos="fade-down">Lợi ích của Matcha
             <div class="underline"></div>
         </h2>
         <!-- article 1 -->
         <article>
-            <div class="article__content">
+            <div class="article__content" data-aos="fade-left">
                 <h3 class="title">Giàu chất chống Oxy hoá</h3>
                 <p class="content">Một trong những lợi ích lớn nhất đối với sức khỏe của matcha chính là chứa chất chống oxy hóa bao gồm một loại flavonol gọi là catechin , trong đó nhiều nhất là epigallocatechin gallate (EGCG ). Catechin đã được chứng minh có hoạt tính kháng viêm, chống ung thư và chống lão hóa. Một nghiên cứu tiến hành tại Đại học Colorado, Mỹ cho thấy EGCG catechin có trong một ly matcha có thể lớn hơn 100 lần so với các loại trà xanh, trà đen hay loại trà thông thường khác</p>
                 <div class="more-info">
@@ -88,14 +90,14 @@
                     <div class="underline underline__small"></div>
                 </div>
             </div>
-            <div class="article__img">
+            <div class="article__img" data-aos="fade-right">
                 <img src="./images/article-1.jpg" alt="article"/>
             </div>
         </article>
         <!--end of article 1 -->
         <!-- article 2 -->
         <article>
-            <div class="article__content even">
+            <div class="article__content even" data-aos="fade-left">
                 <h3 class="title">Giàu chất chống Oxy hoá</h3>
                 <p class="content">Một trong những lợi ích lớn nhất đối với sức khỏe của matcha chính là chứa chất chống oxy hóa bao gồm một loại flavonol gọi là catechin , trong đó nhiều nhất là epigallocatechin gallate (EGCG ). Catechin đã được chứng minh có hoạt tính kháng viêm, chống ung thư và chống lão hóa. Một nghiên cứu tiến hành tại Đại học Colorado, Mỹ cho thấy EGCG catechin có trong một ly matcha có thể lớn hơn 100 lần so với các loại trà xanh, trà đen hay loại trà thông thường khác</p>
                 <div class="more-info">
@@ -103,11 +105,41 @@
                     <div class="underline underline__small"></div>
                 </div>
             </div>
-            <div class="article__img odd">
+            <div class="article__img odd" data-aos="fade-right">
                 <img src="./images/article-2.jpg" alt="article"/>
             </div>
         </article>
-            <!--end of article 2 -->
+        <!--end of article 2 -->
+        <!-- article 3 -->
+        <article>
+            <div class="article__content" data-aos="fade-left">
+                <h3 class="title">Giàu chất chống Oxy hoá</h3>
+                <p class="content">Một trong những lợi ích lớn nhất đối với sức khỏe của matcha chính là chứa chất chống oxy hóa bao gồm một loại flavonol gọi là catechin , trong đó nhiều nhất là epigallocatechin gallate (EGCG ). Catechin đã được chứng minh có hoạt tính kháng viêm, chống ung thư và chống lão hóa. Một nghiên cứu tiến hành tại Đại học Colorado, Mỹ cho thấy EGCG catechin có trong một ly matcha có thể lớn hơn 100 lần so với các loại trà xanh, trà đen hay loại trà thông thường khác</p>
+                <div class="more-info">
+                    <a href="#">xem thêm</a>
+                    <div class="underline underline__small"></div>
+                </div>
+            </div>
+            <div class="article__img" data-aos="fade-right">
+                <img src="./images/article-3.jpg" alt="article"/>
+            </div>
+        </article>
+        <!--end of article 3 -->
+        <!-- article 4 -->
+        <article>
+            <div class="article__content even" data-aos="fade-left">
+                <h3 class="title">Giàu chất chống Oxy hoá</h3>
+                <p class="content">Một trong những lợi ích lớn nhất đối với sức khỏe của matcha chính là chứa chất chống oxy hóa bao gồm một loại flavonol gọi là catechin , trong đó nhiều nhất là epigallocatechin gallate (EGCG ). Catechin đã được chứng minh có hoạt tính kháng viêm, chống ung thư và chống lão hóa. Một nghiên cứu tiến hành tại Đại học Colorado, Mỹ cho thấy EGCG catechin có trong một ly matcha có thể lớn hơn 100 lần so với các loại trà xanh, trà đen hay loại trà thông thường khác</p>
+                <div class="more-info">
+                    <a href="#">xem thêm</a>
+                    <div class="underline underline__small"></div>
+                </div>
+            </div>
+            <div class="article__img odd" data-aos="fade-right">
+                <img src="./images/article-4.jpg" alt="article"/>
+            </div>
+        </article>
+        <!--end of article 4 -->
     </section>
     <!--end of page articles -->
     <!-- page products section -->
@@ -268,10 +300,10 @@
     <!--end of page products section -->
     <!-- customer review -->
     <section class="review" id="review">
-        <h2 class="review__title title-commonly">Khách hàng đánh giá
+        <h2 class="review__title title-commonly" data-aos="fade-down">Khách hàng đánh giá
             <div class="underline"></div>
         </h2>
-        <div class="review__latest">
+        <div class="review__latest" data-aos="fade-down">
             <div class="customer-img"></div>
             <div class="comment">
                 <div class="customer-info">
@@ -281,10 +313,10 @@
                 </div>
             </div>
         </div>
-        <p class="review__sologan">Sự hài lòng của khách hàng chính hạnh phúc của chúng tôi</p>
+        <p class="review__sologan" data-aos="fade-down">Sự hài lòng của khách hàng chính hạnh phúc của chúng tôi</p>
         <div class="review__list">
             <!-- block 1 -->
-            <div class="block">
+            <div class="block" data-aos="fade-up">
                 <img src="./images//customer-img-1" alt="customer" />
                 <div>
                     <h2>LÊ THÙY</h2>
@@ -294,7 +326,7 @@
             </div>
             <!-- end of block 1 -->
             <!-- block 2 -->
-            <div class="block">
+            <div class="block" data-aos="fade-up">
                 <img src="./images//customer-img-1" alt="customer" />
                 <div>
                     <h2>khương dương</h2>
@@ -304,7 +336,7 @@
             </div>
             <!-- end of block 2 -->
             <!-- block 3 -->
-            <div class="block">
+            <div class="block" data-aos="fade-up">
                 <img src="./images//customer-img-1" alt="customer" />
                 <div>
                     <h2>thái trâm</h2>
@@ -363,6 +395,11 @@
         </div>
     </footer>
     <!--end of page footer -->
+<!-- animation libary -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script>
 // Count down logic
 // Set the date we're counting down to
@@ -447,6 +484,51 @@ carouselPrev.onclick = function() {
         productList.style.transform = "translateX(-" + 305.25 * productListSteps + "px)";
     }
 }
+// selected range prices
+const productsList = [
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 1590000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-1.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 1590000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-2.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 1590000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-3.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 1590000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-4.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 1590000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-5.jpg"
+    },
+    {
+      title: "hút bụi panasonic Mc Cg331rn46",
+      price: 1590000,
+      realPrice: 1840000,
+      discountPercent: 14,
+      img: "carousel-8.jpg"
+    }
+]
 </script>
 </body>
 </html>
