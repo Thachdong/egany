@@ -5,36 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Egany_Task</title>
+    <!-- google font "dancing script"-->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <!-- add font awesome -->
+    <script src="https://kit.fontawesome.com/3a5f9214d4.js" crossorigin="anonymous"></script>
+    <!-- add external style file -->
     <link href="./styles/styles.css" rel="stylesheet" />
 </head>
 <body>
+    <div id="greeting">
+        <h2>this page only available on large size of screen</h2>
+        <p>(click any where to close alert)</p>
+    </div>
+    <!-- header start -->
     <header>
+        <!-- top navigation bar start -->
         <nav>
             <ul>
-                <li>
-                    <a href="#">giới thiệu</a>
+                <li id="nav-intro">
+                    <a href="#company-info">giới thiệu</a>
                 </li>
-                <li>
-                    <a href="#">lợi ích của matcha</a>
+                <li id="nav-role">
+                    <a href="#blog">lợi ích của matcha</a>
                 </li>
                 <li>
                     <a href="#">
                         <img src="./images/logo.png" alt="logo" />
                     </a>
                 </li>
-                <li>
-                    <a href="#">sản phẩm</a>
+                <li id="nav-product">
+                    <a href="#products">sản phẩm</a>
                 </li>
-                <li>
-                    <a href="#">đánh giá</a>
+                <li id="nav-comment">
+                    <a href="#review">đánh giá</a>
                 </li>
-                <li>
-                    <a href="#">
+                <li id="nav-buy">
+                    <a href="#products">
                         <button>mua ngay</button>
                     </a>
                 </li>
             </ul>
         </nav>
+        <!--end of top navigation bar -->
+        <!-- hero block start -->
         <div class="hero">
             <div class="hero-content">
                 <h2>
@@ -44,6 +57,396 @@
                 <a href="#">xem  thêm</a>
             </div>
         </div>
-    </header>    
+        <!-- end of hero block -->
+    </header> 
+    <!--end of header -->
+    <!-- company info section -->
+    <section id="company-info" class="company-info section">
+        <h2 class="title-commonly company-info__title">Thông tin công ty</h2>
+        <div class="company-info__content">
+            <span class="open-qoute"></span>
+            <div class="content">
+                <p>Matcha Corp ra đời trên mối liên hệ hợp tác giữa Nakamura Co., Ltd và Matcha Corp. Đây là điểm khác biệt mang lại cho Nakayama Foods mô hình kinh doanh phân phối thực phẩm theo tiêu chuẩn Nhật Bản và sự am hiểu sâu sắc về thị trường Việt Nam.</p>
+                <p>MatchaStore là hệ thống phân phối các loại trà Nhật Bản thuộc Matcha Corp. Bột trà xanh Matcha được nhập khẩu 100% từ Nhật Bản, sản phẩm là tự nhiên và nguyên chất, không chứa bất kì hóa chất hay hương liệu nào khác.</p>            
+            </div>
+            <span class="close-qoute open-qoute"></span>
+        </div>
+    </section>
+    <!-- end of compny section -->
+    <!-- page articles -->
+    <section class="blog section" id="blog">
+        <h2 class="blog__header title-commonly">Lợi ích của Matcha
+            <div class="underline"></div>
+        </h2>
+        <!-- article 1 -->
+        <article>
+            <div class="article__content">
+                <h3 class="title">Giàu chất chống Oxy hoá</h3>
+                <p class="content">Một trong những lợi ích lớn nhất đối với sức khỏe của matcha chính là chứa chất chống oxy hóa bao gồm một loại flavonol gọi là catechin , trong đó nhiều nhất là epigallocatechin gallate (EGCG ). Catechin đã được chứng minh có hoạt tính kháng viêm, chống ung thư và chống lão hóa. Một nghiên cứu tiến hành tại Đại học Colorado, Mỹ cho thấy EGCG catechin có trong một ly matcha có thể lớn hơn 100 lần so với các loại trà xanh, trà đen hay loại trà thông thường khác</p>
+                <div class="more-info">
+                    <a href="#">xem thêm</a>
+                    <div class="underline underline__small"></div>
+                </div>
+            </div>
+            <div class="article__img">
+                <img src="./images/article-1.jpg" alt="article"/>
+            </div>
+        </article>
+        <!--end of article 1 -->
+        <!-- article 2 -->
+        <article>
+            <div class="article__content even">
+                <h3 class="title">Giàu chất chống Oxy hoá</h3>
+                <p class="content">Một trong những lợi ích lớn nhất đối với sức khỏe của matcha chính là chứa chất chống oxy hóa bao gồm một loại flavonol gọi là catechin , trong đó nhiều nhất là epigallocatechin gallate (EGCG ). Catechin đã được chứng minh có hoạt tính kháng viêm, chống ung thư và chống lão hóa. Một nghiên cứu tiến hành tại Đại học Colorado, Mỹ cho thấy EGCG catechin có trong một ly matcha có thể lớn hơn 100 lần so với các loại trà xanh, trà đen hay loại trà thông thường khác</p>
+                <div class="more-info">
+                    <a href="#">xem thêm</a>
+                    <div class="underline underline__small"></div>
+                </div>
+            </div>
+            <div class="article__img odd">
+                <img src="./images/article-2.jpg" alt="article"/>
+            </div>
+        </article>
+            <!--end of article 2 -->
+    </section>
+    <!--end of page articles -->
+    <!-- page products section -->
+    <section class="products section" id="products">
+        <!-- product for sell -->
+        <div class="product__sell">
+            <h2 class="title-commonly">Sản phẩm
+                <div class="underline"></div>
+            </h2>
+            <div class="content">
+                <!-- img list -->
+                <div class="content__imgs-list">
+                    <img class="img-list" src="./images/img-list-1.jpg" alt="product-1" />
+                    <img class="img-list" src="./images/img-list-2.jpg" alt="product-2" />
+                    <img class="img-list" src="./images/img-list-3.jpg" alt="product-3" />
+                    <img class="img-list" src="./images/img-list-4.jpg" alt="product-4" />
+                    <img class="img-list" src="./images/img-list-5.jpg" alt="product-5" />
+                </div>
+                <!--end of img list -->
+                <!-- current image -->
+                <div class="content__curent-img">
+                    <img id="current-img" src="./images/img-list-1.jpg" alt="product-1" />
+                </div>
+                <!--end of current image -->
+                <!-- content details -->
+                <div class="content__details">
+                    <h2>BỘT TRÀ XANH MATCHA AKI 100G</h2>
+                    <div class="prices">
+                        <span class="price__selloff">210, 000đ</span>
+                        <span class="price__real">490,000₫</span>
+                        <p class="price__discount">Tiết kiệm: 280,000₫ (-57%)</p>
+                    </div>
+                    <ul class="disc">
+                        <li>Xuất xứ: Nhật Bản</li>
+                        <li>Sản xuất bởi: MatchaJapan</li>
+                        <li>Chứng nhận chất lượng thực phẩm bởi JAS</li>
+                        <li>Sản phẩm đạt tiêu chuẩn chứng nhận ISO 22000:2005</li>
+                        <li>Công Nhận Chất lượng bởi JAB – Japan Accreditation Board</li>
+                    </ul>
+                    <div class="buy-btn">
+                        <a href="#">mua ngay!!</a>
+                    </div>
+                    <div class="count-down">
+                        <p>Chương trình sẽ kết thúc sau</p>
+                        <div class="count-block">
+                            <div class="time">
+                                <div id="day">32 <br/> ngày</div>
+                                <span>:</span>
+                            </div>
+                            <div class="time">
+                                <div id="hours">21 <br/> giờ</div>
+                                <span>:</span>
+                            </div>
+                            <div class="time">
+                                <div id="minutes">32 <br/> phút</div>
+                                <span>:</span>
+                            </div>
+                            <div class="time">
+                                <div id="seconds">32 <br/> giây</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of content details -->
+            </div>
+        </div>
+        <!-- end of product for sell -->
+        <!-- product carousel -->
+        <div class="product__carousel">
+            <div class="carousel-container">
+                <h2>đồng giá từ 1500k đến 2000k - giảm đến 50%</h2>
+                <p>Chọn theo phân khúc giá:</p>
+                <div class="price-range">
+                    <span class="price">1500K</span>
+                    <span class="dash"></span>
+                    <span class="price">2000K</span>
+                    <span class="dash"></span>
+                    <span class="price">2500K</span>
+                </div>
+                <div class="carousel js-product-carousel">
+                    <div class="carousel__view">
+                            <span class="carousel__control-prev">&#10094;</span>
+                            <span class="carousel__control-next">&#10095;</span>
+                        <ul class="product-list js-product-list">
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <img src="./images/carousel-1.jpg" />
+                                    <p>hút bụi panasonic Mc Cg331rn46</p>
+                                    <div class="product-price">
+                                        <span>1,590,000</span>
+                                        <span class="discount-percent">-14%</span>
+                                        <p>1,840,000</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <img src="./images/carousel-2.jpg" />
+                                    <p>hút bụi panasonic Mc Cg331rn46</p>
+                                    <div class="product-price">
+                                        <span>1,590,000</span>
+                                        <span>-14%</span>
+                                        <p>1,840,000</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <img src="./images/carousel-3.jpg" />
+                                    <p>hút bụi panasonic Mc Cg331rn46</p>
+                                    <div class="product-price">
+                                        <span>1,590,000</span>
+                                        <span>-14%</span>
+                                        <p>1,840,000</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <img src="./images/carousel-4.jpg" />
+                                    <p>hút bụi panasonic Mc Cg331rn46</p>
+                                    <div class="product-price">
+                                        <span>1,590,000</span>
+                                        <span>-14%</span>
+                                        <p>1,840,000</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <img src="./images/carousel-5.jpg" />
+                                    <p>hút bụi panasonic Mc Cg331rn46</p>
+                                    <div class="product-price">
+                                        <span>1,590,000</span>
+                                        <span>-14%</span>
+                                        <p>1,840,000</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <img src="./images/carousel-6.jpg" />
+                                    <p>hút bụi panasonic Mc Cg331rn46</p>
+                                    <div class="product-price">
+                                        <span>1,590,000</span>
+                                        <span>-14%</span>
+                                        <p>1,840,000</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of product carousel -->
+    </section>
+    <!--end of page products section -->
+    <!-- customer review -->
+    <section class="review" id="review">
+        <h2 class="review__title title-commonly">Khách hàng đánh giá
+            <div class="underline"></div>
+        </h2>
+        <div class="review__latest">
+            <div class="customer-img"></div>
+            <div class="comment">
+                <div class="customer-info">
+                    <h2>RADISLAV GANDAPAS</h2>
+                    <p>CEO & Founder AothunTX</p>
+                    <div class="comment-content">Tôi rất hài lòng về sản phẩm dịch vụ của MatCha. Ba mẹ tôi rất thích dùng sản phẩm này. Chắc chắn sẽ giới thiệu thêm nhiều người dùng MatCha nữa. <br /> <br /></div>
+                </div>
+            </div>
+        </div>
+        <p class="review__sologan">Sự hài lòng của khách hàng chính hạnh phúc của chúng tôi</p>
+        <div class="review__list">
+            <!-- block 1 -->
+            <div class="block">
+                <img src="./images//customer-img-1" alt="customer" />
+                <div>
+                    <h2>LÊ THÙY</h2>
+                    <div>Chủ tịch và sáng lập MaxVN</div>
+                    <p>Dùng vào da tôi dần cải thiện và mỗi buổi sáng thức đậy đỡ uể oải hơn. Tôi đã thay café bằng MatCha được hơn 1 tuần</p>
+                </div>
+            </div>
+            <!-- end of block 1 -->
+            <!-- block 2 -->
+            <div class="block">
+                <img src="./images//customer-img-1" alt="customer" />
+                <div>
+                    <h2>khương dương</h2>
+                    <div>Phó giám đốc Chuỗi cửa hàng Riot</div>
+                    <p>Giá hợp lý và nguồn gốc xuất xứ rõ ràng. Tôi đã tin dùng Matcha ở đây được 2 năm rồi và chưa có vấn đề gì.</p>
+                </div>
+            </div>
+            <!-- end of block 2 -->
+            <!-- block 3 -->
+            <div class="block">
+                <img src="./images//customer-img-1" alt="customer" />
+                <div>
+                    <h2>thái trâm</h2>
+                    <div>Chuyên gia chăm sóc sắc đẹp</div>
+                    <p>Tôi rất hài lòng về sản phẩm dịch vụ của bạn. Hy vọng chúng ta có nhiều cơ hội làm việc với nhau hơn.</p>
+                </div>
+            </div>
+            <!-- end of block 3 -->
+        </div>
+    </section>
+    <!-- end of customer review -->
+    <!-- page footer -->
+    <footer>
+        <div class="footer__nav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#company-info">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="#products">Sản phẩm</a>
+                    </li>
+                    <li>
+                        <a href="#company-info">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#blog">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="#products">Sale pages</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="author">Copyright © 2018 EGANY. All rights reserved.</div>
+        </div>
+        <div class="footer__contact">
+            <a href="#">liên lạc với chúng tôi</a>
+            <p>Theo dõi chúng tôi</p>
+            <div class="social-icon">
+                <div>
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div>
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div>
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div>
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div>
+                    <i class="fab fa-google-plus-g"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end of page footer -->
+<script>
+// Count down logic
+// Set the date we're counting down to
+let dateCountTo = new Date("Jan 25, 2020").getTime();
+// Update the count down every 1 second
+let x = setInterval(function() {
+        // Get current date and time
+        let currentDate = new Date().getTime();
+        // Find the distance between now and the count down date
+        var distance = dateCountTo - currentDate;
+        // calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Display the result in the element with id="demo"
+        document.getElementById("day").innerHTML = days + "<br /> Ngày";
+        document.getElementById("hours").innerHTML = hours + "<br /> Giờ";
+        document.getElementById("minutes").innerHTML = minutes + "<br /> Phút";
+        document.getElementById("seconds").innerHTML = seconds + "<br /> Giây";
+        // If the count down is finished, write some text
+        if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+
+// images list selling product logic
+document.addEventListener('DOMContentLoaded', () => {
+    // show selling product img list
+    let imgList = document.querySelectorAll(".img-list");
+    imgList = [...imgList];
+    let currentImg = document.getElementById("current-img");
+    imgList.map(img => {
+        img.addEventListener("click", () => {
+            currentImg.src = img.src;
+        });
+    })
+
+    let greeting = document.getElementById("greeting");
+    greeting.addEventListener("click", () => {
+        greeting.style.display = "none";
+    })
+});
+
+// carousel logic
+let carousel = document.querySelector('.js-product-carousel');
+carouselize(carousel);
+function carouselize(carousel) {
+    let productList = carousel.querySelector('.js-product-list');
+    let productListWidth = 0;
+    let productListSteps = 0;
+    let products = carousel.querySelectorAll('.product');
+    let productAmount = 0;
+    let productAmountVisible = 4;
+    let carouselPrev = carousel.querySelector('.carousel__control-prev');
+    let carouselNext = carousel.querySelector('.carousel__control-next');
+
+//Call all the products
+[].forEach.call(products, function(product) {
+    console.log(product);
+    productAmount++;
+    productListWidth += 305.25;
+    productList.style.width = productListWidth + "px";
+});
+
+carouselNext.onclick = function() {
+    if(productListSteps < productAmount - productAmountVisible) {
+    productListSteps++;
+    moveProductList();
+    }
+}
+carouselPrev.onclick = function() {
+    if(productListSteps > 0) {
+    productListSteps--;
+    moveProductList();
+    }
+}
+
+// Move the carousels product-list
+    function moveProductList() {
+        productList.style.transform = "translateX(-" + 305.25 * productListSteps + "px)";
+    }
+}
+</script>
 </body>
 </html>
